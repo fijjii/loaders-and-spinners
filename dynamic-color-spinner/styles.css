@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.loader {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cube {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    animation: cubeAnimation 4s infinite linear, cubeColorChange 4s infinite ease-in-out;
+    background: linear-gradient(0deg, #3498db, #e74c3c); /* Gradient between Color 1 and Color 2 */
+}
+
+@keyframes cubeAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cubeColorChange {
+    0%, 100% {
+        background: linear-gradient(0deg, #3498db, #e74c3c);
+    }
+    25% {
+        background: linear-gradient(0deg, #e74c3c, #f1c40f);
+    }
+    50% {
+        background: linear-gradient(0deg, #f1c40f, #2ecc71);
+    }
+    75% {
+        background: linear-gradient(0deg, #2ecc71, #9b59b6);
+    }
+}
